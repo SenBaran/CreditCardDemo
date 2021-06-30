@@ -24,7 +24,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartNQuick.AspMvc", "Smart
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolutionCopier.ConApp", "SolutionCopier.ConApp\SolutionCopier.ConApp.csproj", "{25C68BD1-114B-4226-AB35-3261DB5D8FB6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartNQuick.Logic.UnitTest", "SmartNQuick.Logic.UnitTest\SmartNQuick.Logic.UnitTest.csproj", "{F2C302CC-55F9-41C7-B07C-3B0CC062ADC0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartNQuick.Logic.UnitTests", "SmartNQuick.Logic.UnitTests\SmartNQuick.Logic.UnitTests.csproj", "{22E65488-50B6-4468-AECF-BBF09FDABBEB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -64,10 +64,10 @@ Global
 		{25C68BD1-114B-4226-AB35-3261DB5D8FB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{25C68BD1-114B-4226-AB35-3261DB5D8FB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{25C68BD1-114B-4226-AB35-3261DB5D8FB6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F2C302CC-55F9-41C7-B07C-3B0CC062ADC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F2C302CC-55F9-41C7-B07C-3B0CC062ADC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F2C302CC-55F9-41C7-B07C-3B0CC062ADC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F2C302CC-55F9-41C7-B07C-3B0CC062ADC0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22E65488-50B6-4468-AECF-BBF09FDABBEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22E65488-50B6-4468-AECF-BBF09FDABBEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22E65488-50B6-4468-AECF-BBF09FDABBEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22E65488-50B6-4468-AECF-BBF09FDABBEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
