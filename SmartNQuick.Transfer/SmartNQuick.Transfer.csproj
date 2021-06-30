@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <Folder Include="Models\Business\" />
+    <Folder Include="Models\Persistence\" />
   </ItemGroup>
 
 </Project>
