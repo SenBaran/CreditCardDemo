@@ -19,6 +19,29 @@ namespace SmartNQuick.Logic.Migrations
                 .HasAnnotation("ProductVersion", "5.0.6")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("SmartNQuick.Logic.Entities.Creditcard.Creditcard", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<long>("CreditcardNumber")
+                        .HasColumnType("bigint");
+
+                    b.Property<byte[]>("RowVersion")
+                        .IsConcurrencyToken()
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasColumnType("rowversion");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CreditcardNumber")
+                        .IsUnique();
+
+                    b.ToTable("Creditcards");
+                });
+
             modelBuilder.Entity("SmartNQuick.Logic.Entities.MusicStore.Album", b =>
                 {
                     b.Property<int>("Id")

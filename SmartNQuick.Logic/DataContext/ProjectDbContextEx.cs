@@ -9,6 +9,7 @@ namespace SmartNQuick.Logic.DataContext
 		public DbSet<Entities.MusicStore.Genre> Genres { get; set; }
 		public DbSet<Entities.MusicStore.Artist> Artists { get; set; }
 		public DbSet<Entities.MusicStore.Album> Albums { get; set; }
+		public DbSet<Entities.Creditcard.Creditcard> Creditcards { get; set; }
 
 
 		partial void GetDbSet<C, E>(ref DbSet<E> dbset) where E : class
@@ -24,6 +25,10 @@ namespace SmartNQuick.Logic.DataContext
 			else if (typeof(C) == typeof(ClientCorntracts.Persistence.MusicStore.IAlbum))
 			{
 				dbset = Albums as DbSet<E>;
+			}
+			else if (typeof(C) == typeof(ClientCorntracts.Persistence.Creditcard.ICreditcard))
+			{
+				dbset = Creditcards as DbSet<E>;
 			}
 		}
 
@@ -58,6 +63,13 @@ namespace SmartNQuick.Logic.DataContext
 						 .HasMaxLength(1024);
 			albumBuilder.HasIndex(p => p.Title)
 						 .IsUnique();
+
+			var creditcardBuilder = modelBuilder.Entity<Entities.Creditcard.Creditcard>();
+
+			creditcardBuilder.HasKey(p => p.Id);
+			creditcardBuilder.Property(p => p.RowVersion).IsRowVersion();
+			creditcardBuilder.Property(p => p.CreditcardNumber).IsRequired();
+			creditcardBuilder.HasIndex(p => p.CreditcardNumber).IsUnique();
 		}
 	}
 }

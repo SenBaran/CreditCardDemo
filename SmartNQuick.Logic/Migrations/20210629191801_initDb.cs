@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SmartNQuick.Logic.Migrations
 {
-    public partial class InitDb : Migration
+    public partial class initDb : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -19,6 +19,20 @@ namespace SmartNQuick.Logic.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Artists", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Creditcards",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    CreditcardNumber = table.Column<long>(type: "bigint", nullable: false),
+                    RowVersion = table.Column<byte[]>(type: "rowversion", rowVersion: true, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Creditcards", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -74,6 +88,12 @@ namespace SmartNQuick.Logic.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_Creditcards_CreditcardNumber",
+                table: "Creditcards",
+                column: "CreditcardNumber",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Genres_Name",
                 table: "Genres",
                 column: "Name",
@@ -84,6 +104,9 @@ namespace SmartNQuick.Logic.Migrations
         {
             migrationBuilder.DropTable(
                 name: "Albums");
+
+            migrationBuilder.DropTable(
+                name: "Creditcards");
 
             migrationBuilder.DropTable(
                 name: "Genres");
